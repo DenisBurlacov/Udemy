@@ -5,11 +5,25 @@ public class Dog {
     private int tail = 1;
     private String name;
     private String breed;
+    private String size;
 
     public void setName(String dogsName) {
         this.name = dogsName;
     }
 
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        if (size.equalsIgnoreCase("Big") ||
+                size.equalsIgnoreCase("Average")
+                || size.equalsIgnoreCase("Small")) {
+            this.size = size;
+        } else {
+            System.out.println("Size should be one on this: Big, Average, Small");
+        }
+    }
     public String getName() {
         return name;
     }
@@ -52,10 +66,11 @@ public class Dog {
         this.breed = breed;
     }
 
-    public void barks(){
+    public void barks() {
 
     }
-    public void bite(){
+
+    public void bite() {
 
     }
 }
