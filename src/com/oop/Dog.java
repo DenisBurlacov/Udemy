@@ -51,4 +51,11 @@ public class Dog {
     public void setBreed(String breed) {
         this.breed = breed;
     }
+
+    public void barks(){
+
+    }
+    public void bite(){
+
+    }
 }
