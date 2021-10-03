@@ -1,11 +1,21 @@
 package com.oop;
 
 public class Dog {
+    private static int dogsCount;
     private int paws = 4;
     private int tail = 1;
     private String name;
     private String breed;
     private String size;
+
+    public Dog() {
+        dogsCount++;
+        System.out.println("Dogs count " + dogsCount);
+    }
+
+    public static int getDogsCount(){
+        return dogsCount;
+    }
 
     public void setName(String dogsName) {
         this.name = dogsName;
@@ -78,6 +88,10 @@ public class Dog {
     }
 
     public void bite() {
-
+        if (dogsCount >= 2) {
+            System.out.println("Dogs are biting you");
+        } else {
+            barks();
+        }
     }
 }
